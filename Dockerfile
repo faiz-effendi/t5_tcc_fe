@@ -5,4 +5,6 @@ RUN npm install
 copy . .
 RUN npm run build
 EXPOSE 5173 
-CMD ["npm", "run", "dev"]
+
+# biar bisa diakses external
+CMD ["npm", "run", "dev", "--", "--host"] 
